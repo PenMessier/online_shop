@@ -1,0 +1,42 @@
+<div  class="sidemenu">
+	<ul class="leftmenu" id="menu">
+		<li id="menu-item"><a href="index.php">Home</a></li>
+		<li id="menu-item" class="menu-item topmenu sub-menu-trigger">
+			<a href="javascript:void(0)">Teas and Things</a>
+			<ul class="sub-left">
+				<li id="menu-item" class="sub-menu-item">
+					<a href="#">Tea</a>
+				</li>
+				<li id="menu-item" class="sub-menu-item">
+					<a href="#">Tea facilities</a>
+				</li>
+				<li id="menu-item" class="sub-menu-item">
+					<a href="#">Homemade pastries</a>
+				</li>
+				<li id="menu-item" class="sub-menu-item">
+					<a href="#">Planning the tea party</a>
+				</li>
+				<li id="menu-item" class="sub-menu-item">
+					<a href="#">Recipes</a>
+				</li>
+			</ul>
+		</li>
+		<li id="menu-item"><a href="index.php?page=shop">Shop online</a></li>
+		<li id="menu-item"><a href="#">Get in touch</a></li>
+		<li id="menu-item"><a href="index.php?page=cart">Cart</a></li>
+
+		{% if session.login is defined and session.password is defined %}
+
+			<li id="menu-item">
+				<a href="index.php?page=profile">My account</a>
+			</li>
+			<li id="menu-item"><a href="index.php?page=login&action=logout">Logout</a></li>
+		{% else %}
+			<li id="menu-item"><a href="index.php?page=login">Login</a></li>
+		{% endif %}
+
+		{% if session.login is defined and session.password is defined and session.login == 'admin@tea.org' %}
+			<li id="menu-item"><a href="../admin/index.php">Administration</a></li>
+		{% endif %}
+	</ul>
+</div>

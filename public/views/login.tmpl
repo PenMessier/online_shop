@@ -1,0 +1,35 @@
+{% include 'header.tmpl' %}
+
+<div class="page-container">
+	<h2>Login or Create an Account</h2>
+	<p class="error">{{ content ? content : "" }}</p>
+	<div class="fieldset">
+		<div class="login_tab">
+			<h3>ALREADY HAVE AN ACCOUNT</h3>
+			<p>Please sign in below:</p>
+			<form class="login_form" method="post">
+				<input type="email" name="login" placeholder="*email address"  required><br>
+				<input type="password" name="pass" placeholder="*password" required><br>
+				<p>* Required fields</p>
+				<input class="trigger login" type="submit" name="enter" value="login">
+			</form>
+			<a href="#">FORGOT YOUR PASSWORD?</a>
+		</div>
+		<div class="login_tab">
+			<h3>DON’T HAVE AN ACCOUNT YET</h3>
+			<p>Create an account to make shopping more convinient:</p>
+			<form class="login_form" method="post">
+				<label>Enter your name:</label>
+				<input type="text" name="uname" maxlength="30" placeholder="*name" required><br>
+				<label>Enter your email:</label>
+				<input type="email" name="login" placeholder="*email address"  required><br>
+				<label>Create your password:</label>
+				<input type="password" name="pass" minlength="5" placeholder="*password" required><br>
+				<p>* Required fields</p>
+				<input class="trigger login" type="submit" name="submit" value="register">
+			</form>
+		</div>
+	</div>
+</div>
+{% include 'footer.tmpl' %}
+

@@ -1,0 +1,32 @@
+{% include 'header.tmpl' %}
+{% include 'header_shop.tmpl' %}
+<section class="content">
+	{% include 'sidemenu.tmpl' %}
+	<div class="cat-wrap">
+
+		{% if content %}
+			{% for good in content|slice(0,9) %}
+				<div class="item" data-id="{{ good.id|e }}"
+					style="background-image:url(images/{{ good.picture|e }}">
+					<a href="index.php?page=product&id={{ good.id|e }}" class="tea-more">
+						<h3 class="tea-name">{{ good.name }}</h3>
+						<div class="overlay">
+							<p class="tea-desc">
+								{{ attribute(good, 'desc-short')|e }}
+							</p>
+							<p>Price: <span class="price">{{ good.price|e }}</span>$/oz.</p>
+							<a href="javascript:void(0)" 
+								class="trigger buyme" 
+								id="{{ good.id|e }}"
+								data-id="{{ good.price|e }}">
+								Buy
+							</a>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<input type="submit" id="load-more-trigger" value="Load more">
+</section>
+{% include 'footer.tmpl' %}

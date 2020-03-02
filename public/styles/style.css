@@ -1,0 +1,831 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: block;
+	font-family: 'Handlee', cursive;
+}
+
+header {
+	width: 100%;
+	min-height: 75px;
+}
+
+div {
+	display: block;
+	border: 0;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: 700;
+}
+h2 {
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+}
+h3 {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+input, textarea {
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.full-wrap {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.header-wrap {
+	display: table;
+	width: 100%;
+	padding: 0.5em;
+}
+
+.logo {
+	display: table-cell;
+	width:150px;
+	height: 150px;
+	vertical-align: middle;
+	text-align: center;
+}
+.logo img {
+	max-width: 90px;
+	height: auto;
+}
+.menu {
+	text-align: right;
+}
+.page-container {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+/* -------------- Navigation -------------*/
+
+nav {
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 1em;
+	font-size: 1em;
+	
+}
+nav ul, li {
+	list-style-type: none;
+	display: inline-block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 20px;
+    text-transform: uppercase;  
+}
+
+nav ul li:first-child {
+	margin-left: 0;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+	color: #04376C;
+}
+a:hover {
+	color: #d6575b;
+}
+.topmenu {
+	position: relative;
+}
+
+.topmenu:hover .sub-menu {
+	display: block;
+}
+
+.sub-menu {
+	display: none;
+	position: absolute;
+	top: 4px;
+	left: 20px;
+	-webkit-padding-start: 10px;
+	padding-top: 1em;
+	text-align: left;
+	background: #fff;
+	font-size: 0.8em;
+	z-index:5;
+}
+.sub-menu-item {
+	padding: 1em;
+	margin: 0;
+}
+.search {
+	display: table-cell;
+	width: 20px;
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+.cart-pict {
+	display: table-cell;
+	width: 20px;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+/*-------------- Mobile main menu -------------*/
+.closebtn {
+	font-size: 0.5em;
+	display: block;
+	position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-width: 600px) {
+	#menu {display:none;}
+	.button-collapse {display: block;}
+}
+@media screen and (min-width: 601px) {
+	#menu {display:block;}
+	.button-collapse {display: none;}
+	.closebtn {display:none;}
+}
+
+/*-------------- Side menu -------------*/
+
+.sidemenu {
+	display: table-cell;
+	width: 200px;
+}
+.sidemenu li {
+	display: block;
+}
+.sub-left {
+	display: none;
+	width: 100px;
+}
+/*-------------- End of Side menu -------------*/
+
+/* -------------- End of Navigation -------------*/
+
+/* -------------- Slider -------------*/
+
+.hero {
+	width: 100%;
+	height: 500px;
+}
+
+.viewport {
+	height: 500px;
+}
+
+.viewport a:hover .hero-inner {
+	transform: scale(1.1);
+}
+
+.view-1 {
+	background: url("../images/tea-desktop.jpg") no-repeat;
+	background-size: cover;
+}
+.view-2 {
+	background: url("../images/herbal-tea-1.jpg") no-repeat;
+	background-size: cover;
+}
+
+.view-3 {
+	background: url("../images/pastries.jpg") no-repeat;
+	background-size: cover;
+}
+.view-4 {
+	background: url("../images/afternoon-tea-at-the-tennis-party.jpg") no-repeat;
+	background-size: cover;
+}
+.view-5 {
+	background: url("../images/tea-strainer.jpg") no-repeat;
+	background-size: cover;
+}
+.hero-inner {
+	width: 100%;
+	vertical-align: middle;
+	padding-top: 6em;
+	text-align: center;
+	color: white;
+}
+/* -------------- End of Slider -------------*/
+/* -------------- Footer -------------*/
+
+footer {
+	background-color: rgba(232, 214, 175, 0.4);
+	color: #737171;
+	font-size: 1em;
+	padding: 2em 1em;
+	display: table;
+	width: 100%;
+}
+.footer-wrap p {
+	display: table-cell;
+	text-align: left;
+	float: left;
+	padding-top: 0.5em;
+	
+}
+.social-media {
+	float: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 300px;
+	height: 20px;
+}
+.social-media a:hover {
+	color: #d6575b;
+	filter:hue-rotate(90deg);
+}
+.social-link-1 {
+	margin-right: 1em; 
+	width: 50px;
+	height: 50px;
+	background: url("../images/facebook.png") center no-repeat;
+	background-size: contain;
+}
+
+.social-link-2 {
+	margin-right: 1em; 
+	width: 50px;
+	height: 50px;
+	background: url("../images/twitter.png") center no-repeat;
+	background-size: contain;
+}
+.social-link-3 {
+	margin-right: 1em; 
+	width: 50px;
+	height: 50px;
+	background: url("../images/insta.png") center no-repeat;
+	background-size: contain;
+}
+/* -------------- End of Footer -------------*/
+
+/* -------------- Blog content -------------*/
+
+.content {
+	width: 100%;
+	display: table;
+}
+.content-wrap {
+	display: table-cell;
+	padding: 4em 2em;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.post {
+	margin: 0 auto 2em;
+}
+.post-inner {
+	padding: 2em;
+	background-color: #fff;
+}
+.post-title {
+	color: #d6575b;
+}
+.meta {
+	font-size: 1em;
+	line-height: 2em;
+}
+.post-content {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	text-align: left;
+	padding-top: 1.5em;	
+}
+
+/* -------------- Read more -------------*/
+
+.read-more-state {
+	display: none;
+}
+.read-more-target {
+	opacity: 0;
+	max-height: 0;
+	font-size: 0;
+	transition: .25s ease;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+	opacity: 1;
+	font-size: inherit;
+	max-height: 999em;
+}
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Read more';
+}
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+.read-more-trigger, .trigger {
+	width: 6em;
+	margin: 2em auto 0 auto; 
+	cursor: pointer;
+	display: block;
+	border: 2px solid #d6575b;
+	border-radius: 10em;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	color: #d6575b;
+	transition: 0.5s ease;
+} 	
+.read-more-trigger:hover, .trigger:hover {
+	color: #34495e;
+	border-color: #34495e;
+}
+/* -------------- End of Blog content -------------*/
+
+/* -------------- Shop-online -------------*/
+
+.shop-header {
+	width: 100%;
+	height: 300px;
+	background: url("../images/tea-plantation.jpg") no-repeat, rgba(92, 92, 98, 0.6);
+	background-blend-mode: multiply;
+	background-size: cover;
+	padding: 5em 1em;
+}
+.nav-tittle {
+	color: #fff;
+}
+.tea-nav {
+	text-align: center;	
+}
+.tea-nav a {
+	color: #fff;
+}
+.tea-nav a:hover {
+	color: #d6575b;
+}
+/* -------------- Catalogue -------------*/
+
+.cat-wrap {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1em;
+	background-color: #f7f7f7;
+}
+.item {
+	width: 300px;
+	height: 350px;
+	position: relative;
+	margin: 1em;
+	text-transform: none;
+	-webkit-padding-start: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.item h3 {
+	font-size: 2em;
+	font-weight: 700;
+	padding: 2em;
+	color: #FF4040 /*#A60000 #FF0000 #04376C*/;
+}
+.overlay {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:rgba(92, 92, 98, 0.9);
+	width: 100%;
+	height: 100%;
+	transition: 1.25s ease-in-out;
+}
+.item:hover .overlay {
+	display: block;
+}
+.item a:hover {
+	color:#fff;
+	border-color: #fff;
+}
+
+.overlay p {
+	font-size: 1.2em;
+	text-align: center;
+	margin: 1em auto 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+}
+.tea-desc {
+	padding: 1em;
+}
+.trigger {
+	background: none;
+	font-size: 1em;
+	margin: 1em auto 0 auto;
+}
+
+/* -------------- Load more button -------------*/
+
+#load-more-trigger {
+	width: 6em;
+	margin: 2em auto 2em auto; 
+	cursor: pointer;
+	display: block;
+	border: 2px solid #d6575b;
+	border-radius: 10em;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+	color: #d6575b;
+	transition: 0.5s ease;
+	text-transform: none;
+} 	
+#load-more-trigger:hover {
+	color: #34495e;
+	border-color: #34495e;
+}
+
+/* -------------- End of Catalogue -------------*/
+
+/* -------------- Product Page -------------*/
+.product-wrap {
+	margin: 0 auto;
+	width: 100%;
+	padding: 2em;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.product-wrap h2 {
+	color: #04376C;
+}
+.prod-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 1em;
+	width: 100%;
+	text-align: center;
+}
+.prod-main-info {
+	margin-top: 3em;
+	text-align: left;
+}
+.prod-main-info h3 {
+	color: #d6575b;
+	font-size: 1.3em;
+}
+.prod-img {
+	width: 350px;
+	height: 350px;
+	margin: 2em;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.tftable {
+	margin: 0.6em;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1.2em;
+}
+.tftable th, td {
+	text-align: center;
+	max-width: 120px;
+	padding: 0.3em;
+	word-wrap: break-word;
+	display: table-cell;
+}
+.tftable tr {
+	display: table-row;
+	margin: 0.5em;
+}
+.tftable tr:first-child {
+	border-bottom: 2px  #d6575b solid;
+}
+.tftable th {
+	padding: 1em 1em 0.3em;
+}
+
+.price-wrap {
+	margin-top: 5em;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+/* -------------- Desc tabs -------------*/
+
+.tabs {
+	margin: 3em auto;
+	max-width: 700px;
+}
+.nav-tabs {
+	text-align: left;
+
+}
+.nav-tabs li {
+	padding: 1em;
+	cursor: pointer;
+	border: 1px solid  #d6575b;
+	border-radius: 5px 5px 0 0;
+	background-color: #d6575b;
+	color:#fff;
+	position: relative;
+	-webkit-margin-after: 0;
+}
+.nav-tabs li.active {
+	background: #f7f7f7;
+	color: #04376C;	
+}
+.nav-tabs .active:after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #f7f7f7;
+    cursor: none;
+}
+.tab-content {
+	display: none;
+	border: 1px solid  #d6575b;
+	border-radius:0 5px 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+	text-align: left;
+	color: #04376C;
+	padding: 1em 2em;
+}
+.tab-content.active {
+	display: block;
+	
+}
+/* -------------- End of Desc tabs -------------*/
+
+/* -------------- End of Product Page -------------*/
+
+/* -------------- Cart -------------*/
+
+.cart-inner {
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.remove-all {
+	width: 100%;
+	text-align: right;
+	padding-right: 2em;
+}
+.button-remove-all {
+	font-size: 0.9em;
+	color: #737171;
+	text-transform: uppercase;
+}
+.cart {
+	border-spacing: 0 1em;
+	margin: 1em;
+	background-color: #fff;
+	padding: 1em;
+	font-size: 1em;
+}
+.cart-item {
+	display: table-row;
+	border-spacing: 0 1em;
+	vertical-align: top;
+	border: 1px solid #04376C;
+	height: 100px;
+}
+.cart-item-image {
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: table-cell;
+	min-width: 130px;
+	padding: 1em;
+}
+.cart-item-name {
+	display: table-cell;
+	vertical-align: top;
+	text-align: left;
+	width: 100%;
+	padding: 1em;
+	font-size: 1.3em;
+}
+.cart-item-count {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 170px;
+	padding: 1em;
+}
+.cart-item-price {
+	display: table-cell;
+	vertical-align: top;
+	padding: 1.7em 0.6em 0.3em;
+}
+.cart-item-butt {
+	display: table-cell;
+	vertical-align: top;
+	padding: 1.7em 0.7em 0.3em;
+}
+input[name=count] {
+	width: 35px;
+	text-align: center;
+	margin: 0 1em;
+	font-size: 1em;
+}
+input[name=cart-count-minus], input[name=cart-count-plus] {
+	cursor: pointer;
+	font-size: 1.2em;
+	border: none;
+}
+input[type=submit] {
+	text-transform: uppercase;
+}
+.cart-total {
+	display: table-row;
+	vertical-align: bottom;
+	border: 2px solid #04376C;
+	height: 100px;
+}
+.cart-summ {
+	display: table-cell;
+	vertical-align: bottom;
+	padding: 1em;
+	text-align: left;
+	text-transform: uppercase;
+}
+.total-price {
+	display: table-cell;
+	vertical-align: bottom;
+	padding: 1em 0;
+	text-align: right;
+}
+.order {
+	text-transform: uppercase;
+}
+@media screen and (max-width: 599px) {
+	.cart {margin: 0;}
+	.cart-item-image {min-width: 50px;}
+	.cart-item-name {font-size: 1em; padding: 0 0.5em;}
+	.cart-item-count {min-width: 90px;}
+	input[type=button] {margin: 0;}
+	input[name=count] {width: 20px; height: 20px; font-size: 0.9em; margin: 0;}
+}
+
+
+
+/* -------------- End of Cart -------------*/
+
+
+
+
+
+/* -------------- Admin -------------*/
+.add_form {
+	text-align: center;
+}
+.add_form input, textarea, .edit_form input, textarea {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	text-align: left;
+	margin: 0.5em;
+}
+
+.add_form textarea, .edit_form textarea {
+	border-color: #04376C;
+	width: 600px;
+	height: 150px;
+}
+.add_form input[type=file] {
+	width: 300px;
+	height: 50px;
+	background: none;
+	font-size: 1em;
+	margin: 1em auto 0 auto;
+
+}
+.add_form input[type=submit], .edit_form input[type=submit] {
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+/* -------------- Admin: orders page-------------*/
+
+.order_wrap {
+	margin: 3em;
+}
+
+.orders_table {
+	font-family: 'Handlee', cursive;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	color: #04376C;
+	margin: 0.6em;
+	width: 100%;
+	border-collapse: collapse;
+}
+.orders_table th, td {
+	text-align: center;
+	max-width: 120px;
+	padding: 0.3em;
+	word-wrap: break-word;
+	display: table-cell;
+}
+.orders_table tr {
+	display: table-row;
+	margin: 0.5em;
+}
+.orders_table tr:first-child {
+	border-bottom: 2px  #d6575b solid;
+}
+.orders_table th {
+	padding: 1em 1em 0.3em;
+}
+
+.order_form input[type=text] {
+	font-size: 1em;
+	width: 130px;
+	height: 20px;
+}
+.order_form input[type=number] {
+	text-align: center;
+	font-size: 1em;
+	width: 30px;
+	height: 20px;
+}
+.order_form input[type=date] {
+	font-size: 1em;
+	width: 140px;
+	height: 20px;
+}
+
+/* -------------- End of Admin -------------*/
+
+/* -------------- Styles for Login page -------------*/
+
+.fieldset {
+	width: 100%;
+	padding: 2em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: left;
+}
+.fieldset h3 {
+	text-align: left;
+	color: #d6575b;
+	font-size: 1.3em;
+}
+
+.fieldset p, label {
+	margin: 0.5em; 
+	font-size: 1.2em;
+}
+.login_tab {
+	margin: 2em;
+}
+.login_tab a {
+	float: left;
+	margin-top: 1em;
+}
+.login {
+	float: left;
+}
+.error {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #d6575b;
+}
+.login_form input {
+	margin:0.5em; 
+	font-size: 1.2em;
+	width: 150px;
+	height: 30px;
+}
+
+/* -------------- End of Login page -------------*/
+
+
+
+
+
+
+
+
+
+
+

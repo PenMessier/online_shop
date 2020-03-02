@@ -1,0 +1,9 @@
+{% include 'header.tmpl' %}
+<div class="page-container">
+	<h3>Hello, {{ session.uname }} !</h3>
+	<a href="index.php?page=login&action=logout" class="trigger">Logout</a>
+	{% if session.login is defined and session.password is defined and session.login == 'admin@tea.org' %}
+		<a class="trigger" href="../admin/index.php">Administration</a>
+	{% endif %}
+</div>
+{% include 'footer.tmpl' %}

@@ -1,0 +1,66 @@
+{% include 'header.tmpl' %}
+<div class="page-container">
+	<div class="cart-inner">
+		<h2>Cart</h2>
+		{% if content.cart_goods is not empty %}
+			<div class="remove-all">
+				<a href="javascript:document.location.reload()"
+					 class="button-remove-all">
+					 Remove all  
+					 <i class="fas fa-trash-alt"></i>
+				</a>
+			</div>
+			<div class="cart">
+			{% for good in content.cart_goods %}
+
+				<div class="cart-item" id="{{ good.id }}">
+					<div class="cart-item-image"
+					style="background-image:url(images/{{ good.picture }})">
+					</div>
+					<div class="cart-item-name"><a href="index.php?page=product&id={{ good.id }}">{{ good.name }}</a></div>
+					<div class="cart-item-count">
+						<input type="button" name="cart-count-minus" value="-" onclick="document.location.reload()">
+						<input type="number" name="count" value="{{ good.quantity }}" readonly>
+						<input type="button" name="cart-count-plus" value="+" onclick="document.location.reload()">
+					</div>
+					<div class="cart-item-price"><span>{{ good.full_price }}</span>$</div>
+					<div class="cart-item-butt" id="{{ good.cart_id }}">
+						<a class="cart-item-remove" 
+							href="javascript:document.location.reload()">
+							<i class="fas fa-trash-alt"></i>
+						</a>
+					</div>
+				</div>
+
+			{% endfor %}
+			<div class="cart-total">
+				<p class="cart-summ">Total:</p>
+				<p class="cart-summ"></p>
+				<p class="cart-summ"></p>
+				<p class="total-price">
+					<span class="summ">
+						{{ content.summ }}
+					</span>
+					$
+				</p>
+			</div>
+
+			{% if session.login is defined and session.password is defined %}
+				<a href="index.php?page=cart&action=order" class="trigger order">ORDER</a>
+			{% else %}
+				<h3>
+					To make an order you have to be loged in. Please proceed to enter the site.
+				</h3>
+				<a href="index.php?page=login" class="trigger order">enter</a>
+			{% endif %}
+
+		{% elseif  get.action is defined and get.action == 'order' %}
+
+			<h3>{{ content.message }}</h3>
+		{% else %}
+		</div>
+		<h3>There are no goods in your cart yet!</h3>
+	</div>
+	{% endif %}
+</div>
+{% include 'footer.tmpl' %}

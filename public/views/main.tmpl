@@ -1,0 +1,31 @@
+{% include 'header.tmpl' %}
+<div class="main-wrap">
+	{% include 'carousel.tmpl' %}
+	<section class="content">
+		{% include 'sidemenu.tmpl' %}
+		<div class="content-wrap">
+			{% for slug, post in content %}
+				<article class="post post-{{ slug }}">
+					<div class="post-inner">
+						<h2 class="post-title">{{ post.title }}</h2>
+						<div class="meta top">
+							<p class="time">{{ post.date }} &#8226; By
+							<a href="#" class="post-authors">Admin</a></p>
+						</div>
+						<div class="post-content">
+							<input type="checkbox" class="read-more-state" id="post-{{ slug }}">
+							<p class="read-more-wrap">
+								{{ post.post_pre }}
+								<span class="read-more-target">
+									{{ post.post_full }}
+								</span>
+							</p>
+							<label for="post-{{ slug }}" class="read-more-trigger"></label>
+						</div>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	</section>
+</div>
+{% include 'footer.tmpl' %}
